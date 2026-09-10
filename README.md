@@ -10,6 +10,8 @@ AI-written, critic-style reason explaining *what the work itself is like*.
 Everything runs locally. It queries **metadata and links only** — it never
 downloads content, never bypasses DRM or paywalls, and never uploads anything.
 
+> Language / 语言: English | [简体中文](README.zh-CN.md)
+
 ![UI screenshot](docs/images/ui-home.png)
 
 ---
@@ -235,24 +237,29 @@ See [Releases](https://github.com/myainygem/18x-manga-sommelier/releases):
 - [ ] English UI locale
 - [ ] Linux support
 
+## Open-source acknowledgements
+
+Built on top of these open-source projects:
+
+| Project | Purpose | License |
+|---|---|---|
+| [requests](https://github.com/psf/requests) | HTTP client | Apache-2.0 |
+| [curl_cffi](https://github.com/lexiforest/curl_cffi) | TLS fingerprint impersonation (nhentai) | MIT |
+| [pykakasi](https://github.com/miurahr/pykakasi) | Japanese kana/kanji romanization | GPL-3.0-or-later |
+| [OpenCC](https://github.com/BYVoid/OpenCC) | Simplified/Traditional Chinese conversion | Apache-2.0 |
+| [jmcomic (JMComic-Crawler-Python)](https://github.com/tonquer/jmcomic) | 18comic APP API client | MIT |
+| [playwright](https://github.com/microsoft/playwright-python) | Headless browser (hitomi search, cookie login) | Apache-2.0 |
+| [pywebview](https://github.com/r0x0r/pywebview) | Native window (WebView2) | BSD-3-Clause |
+| [pythonnet](https://github.com/pythonnet/pythonnet) | .NET interop (WebView2) | MIT |
+| [clr-loader](https://github.com/pythonnet/clr-loader) | .NET runtime loading | MIT |
+| [pywin32](https://github.com/mhammond/pywin32) | Windows API (Chrome cookie decryption) | PSF |
+| [PyInstaller](https://github.com/pyinstaller/pyinstaller) | Packaging | GPL-2.0-or-later (with exception) |
+| [Inno Setup](https://jrsoftware.org/isinfo.php) | Installer authoring | Freeware |
+
+Also thanks to [DeepSeek](https://platform.deepseek.com/) for the optional AI
+service, and to E-Hentai, nhentai, wnacg, 18comic and hitomi for the public
+metadata this tool queries.
+
 ## License
 
 [MIT](LICENSE) © 2026 myainygem
-
----
-
-## 中文说明（摘要）
-
-**18x Manga Sommelier** 是一个本地运行的成人漫画推荐系统：它读取你自己的漫画
-收藏清单（`folder_list.txt`，GBK 编码），通过 E-Hentai 元数据构建口味画像（作者、
-标签、评分、篇幅），再到多个站点（E-Hentai / nhentai / 绅士漫画 / 禁漫 / hitomi）
-里找出你还没有收藏的作品，配上封面、站内链接和 AI 撰写的鉴赏式推荐理由。
-
-- **只做元数据与链接**：不下载内容、不绕过任何保护，内置限速遵守站点政策；
-- **三步上手**（详见上文）：`parse` → `lookup` → `profile` → `recommend`，
-  然后 `serve`（浏览器）或 `app`（独立窗口）；
-- **可选 DeepSeek AI**：查询扩展、标题消歧、匹配核验、理由撰写；没有 key 自动降级；
-- **隐私**：全部数据保存在本地 `data/`，`config.json` 与收藏数据均被
-  `.gitignore` 排除，请勿提交；打包版放一个 `portable.flag` 即为纯绿色便携模式。
-
-本项目仅供成人（18+）个人学习研究使用。
