@@ -1,0 +1,79 @@
+{
+  "proxy": "",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+  "rate_limits": {
+    "e-hentai.org": 7,
+    "hitomi.la": 2,
+    "nhentai.net": 2,
+    "wnacg.com": 3,
+    "18comic.vip": 3,
+    "api.deepseek.com": 1
+  },
+  "sites": {
+    "ehentai": true,
+    "hitomi": true,
+    "nhentai": false,
+    "wnacg": true,
+    "18comic": true
+  },
+  "ai": {
+    "enabled": true,
+    "api_key": "",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "temperature": 0.3,
+    "max_calls_per_run": 400,
+    "max_tokens_per_call": 500,
+    "search_expand": true,
+    "disambiguate": true,
+    "reasons": true
+  },
+  "recommend": {
+    "quota": 20,
+    "quota_precision": 10,
+    "quota_trending": 10,
+    "quota_series": 0,
+    "min_rating_count": 30,
+    "top_authors_n": 20,
+    "top_tags_n": 40,
+    "author_hit_weight": 20.0,
+    "chinese_bonus": 5.0,
+    "min_score": 5.0,
+    "prefer_recent_since_last": true
+  },
+  "filters": {
+    "require_chinese": true,
+    "hard_exclude_categories": [
+      "Cosplay",
+      "Asian Porn",
+      "Image Set",
+      "Western",
+      "Non-H",
+      "寫真",
+      "寫真集",
+      "真人"
+    ],
+    "hard_exclude_tags": [
+      "other:ai generated"
+    ],
+    "title_regex_exclude": [
+      "\\b3d\\b",
+      "\\bai generated\\b",
+      "ai生成",
+      "AI生成"
+    ],
+    "penalty_tags": {
+      "male:netorare": 20.0,
+      "mixed:mmf threesome": 10.0,
+      "female:netorare": 5.0
+    }
+  },
+  "lookup": {
+    "ehentai_search_url": "https://e-hentai.org/?f_search={q}&f_cats=0",
+    "match_confidence_min": 0.55,
+    "ai_disambiguate_margin": 0.1
+  },
+  "ui": {
+    "search_site": "ehentai"
+  }
+}

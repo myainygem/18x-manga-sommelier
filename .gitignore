@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+build/
+dist/
+
+# 个人数据与隐私（绝不提交）：收藏数据、画像、cookie、密钥、日志
+config.json
+config.json.bak_local
+*.bak_local
+folder_list.txt
+folder_list.txt.bak_local
+data/*
+!data/tag_zh.json
+data.bak_local/
+reports/
+release/
+
+# 本地杂项
+fetch_desc.ps1
+_tmp*
+*.log
+
+# 本机专属安装脚本（含本机路径，不公开）
+installer/manga_rec_v1.iss
+
+# IDE / 编辑器
+.idea/
+.vscode/

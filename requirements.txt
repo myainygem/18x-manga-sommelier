@@ -1,0 +1,11 @@
+# Runtime dependencies
+requests>=2.28
+pykakasi>=2.2
+curl_cffi>=0.7
+OpenCC>=1.1
+jmcomic>=2.7
+playwright>=1.44
+pywin32>=306
+pywebview>=5.0
+
+# pythonnet / clr_loader 由 pywebview 在 Windows 上自动安装
